@@ -49,6 +49,9 @@ body{
 }
 
 .Banner{
+    display: flex;
+    
+    justify-content: flex-end;
     margin-top: 10px; 
     height: 600px;
     background-image: url(/images/Banner.png);
@@ -57,7 +60,7 @@ body{
  
 }
 .Banner__img{
-    margin: 490px 0 0 900px;
+    margin: 490px 0 0 -600px;
     width: 325px;
 }
 .Banner__img:hover{
