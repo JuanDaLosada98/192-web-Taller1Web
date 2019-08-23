@@ -48,26 +48,59 @@ body{
     margin-right: 40px;
 }
 
-.Banner{
+.banner{
     display: flex;
-    
+    flex-direction: column;
+    align-items: flex-end;
     justify-content: flex-end;
     margin-top: 10px; 
     height: 550px;
     background-image: url(/images/Banner-bg.png);
-    
+}
 
- 
+.banner__boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 100px;
+    padding-bottom: 100px;
+    padding-right: 100px;
 }
-.Banner__img{
-    margin: 390px 0 0 -500px;
-    width: 325px;
+
+.banner__boton a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
 }
-.Banner__img:hover{
-    width: 300px;
-     
+
+.banner__boton a img{
+    text-align: center;
+    width: 100%;
+    transition: all .5s ease;
 }
+
+.banner__boton:hover a img{
+    width: 70%;
+}
+
+
 .nav{
     margin-top: 15px;
 }
 
+
+@media (max-width: 600px) {
+
+    .banner{
+        align-items: center;
+    }
+    .banner__boton{
+        padding-right: 0;      
+    }
+    .banner__boton{
+        width:90%;
+    }
+
+}
