@@ -6,6 +6,11 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+    background-image: url(/images/Tituloalt.png);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position-x: 120px;
+    background-position-y: 30px; 
 
 }
 
@@ -23,7 +28,7 @@ body{
 .header__logoTitulo:hover{
     transition: all 1s;
     opacity: 0;
-    background-image: url(/images/Tituloalt.png);
+    
     
     
 }
