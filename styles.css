@@ -7,10 +7,10 @@ body{
     flex-direction: row;
     align-items: center;
     background-image: url(/images/Tituloalt.png);
-    background-size: 200px;
+    background-size: 210px;
     background-repeat: no-repeat;
-    background-position-x: 120px;
-    background-position-y: 30px; 
+    background-position-x: 125px;
+    background-position-y: 35px; 
 
 }
 
@@ -20,8 +20,8 @@ body{
 }
 
 .header__logoTitulo{
-    width: 200px;
-    margin: 10px 0 0 10px;
+    width: 210px;
+    margin: 20px 0 0 10px;
     transition: opacity 1s;
     
 }
@@ -53,14 +53,14 @@ body{
     
     justify-content: flex-end;
     margin-top: 10px; 
-    height: 600px;
-    background-image: url(/images/Banner.png);
+    height: 550px;
+    background-image: url(/images/Banner-bg.png);
     
 
  
 }
 .Banner__img{
-    margin: 490px 0 0 -600px;
+    margin: 400px 0 0 -500px;
     width: 325px;
 }
 .Banner__img:hover{
