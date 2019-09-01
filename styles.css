@@ -6,6 +6,8 @@ html{
     height: 100%;
 }
 body{
+    width: 100%;
+    height: 100%;
     margin: 0px;
 }
 .header{
@@ -88,22 +90,23 @@ body{
 }
 
 .banner{
+    height: 80.99%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-    height: 550px;
     background-image: url(/images/Banner-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .banner__boton{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 100px;
-    padding-bottom: 100px;
-    padding-right: 100px;
+    margin: 0 300px 100px 0;
+ 
+    
 }
 
 .banner__boton a{
