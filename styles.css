@@ -4,6 +4,7 @@
 }
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 body {
   width: 100%;
@@ -150,6 +151,24 @@ body {
 .banner__row {
   width: 100%;
   display: flex;
+  flex-direction: row;
+}
+
+.downarrow{
+  position: absolute;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.downarrow__img{
+  width: 90px;
+  transition: transform .5s ease;
+}
+.downarrow__img:hover{
+  transform: scale(0.8,0.8);
+  transition: transform .5s ease;
 }
 .seller {
   width: 300px;
@@ -205,14 +224,56 @@ body {
   font-size: 30px;
   margin-right: 100px;
 }
+.minibanner{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #ff1f50;
+  justify-content: space-around;
+  transition: 1s;
+  background-image: url(/images/trama.png);
+  background-size: 7%; 
+  background-position-y: -30px; 
+}
+.minibanner:hover{
+  transition: 1s;
+  background-color: #891830;
+
+}
+.midbanner__center{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+  
+}
+.minibanner__img{
+  padding: 30px;
+}
+
+.title{
+  width: 600px;
+  margin-top: 10px;
+}
+.minibanner__text{ 
+  font-family: fr-bold;
+  color: #ffff;
+  font-size: 30px;
+  text-align: center;
+}
+.product{
+  width: 300px;;
+}
 @media (max-width: 600px) {
   .banner {
     align-items: center;
   }
-  .banner__boton {
+  .Banner__imgbtn {
     padding-right: 0;
   }
-  .banner__boton {
+  .Banner__imgbtn {
     width: 90%;
   }
 }
