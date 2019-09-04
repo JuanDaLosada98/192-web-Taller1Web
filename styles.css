@@ -266,6 +266,17 @@ body {
 .product{
   width: 300px;;
 }
+.caracteristics{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+}
+.caracteristics__column{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 @media (max-width: 600px) {
   .banner {
     align-items: center;
