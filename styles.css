@@ -21,6 +21,11 @@ body {
   clear: both;
 }
 
+.centrar{
+  max-width: 1920px;
+  margin: auto;
+}
+
 /*Cabezera --------------------------*/
 .header {
   display: flex;
@@ -178,25 +183,72 @@ body {
   text-decoration: none;
   color: #ffff;
 }
+
+/*Banner ------------------*/
 .banner {
+  position: relative;
   width: 100%;
   height: 80.99%;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  justify-content: flex-end;
+  justify-content: center;
   background-image: url(/images/Banner-bg.png);
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
+.banner__row {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+/* Banner personajes ---------*/
+
+.planet1 {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin-top: 70px;
+}
+
+.planet1__description {
+  max-width: 300px;
+  width: 100%;
+  margin-left: 75px;
+}
+
+.planet1__img {
+  transition: 0.5s ease;
+  
+
+  max-width: 350px;
+  width: 100%;
+
+  margin-top: 25px;
+  margin-left: 60px;
+}
+
+.seller {
+  width: 20%;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  transition: 1.2s ease;
+}
+
+
 .banner__right {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 50%;
   justify-content: flex-end;
   align-items: flex-end;
-  margin: 0 300px 100px 0;
+ 
 }
 
 .banner__right a {
@@ -212,14 +264,53 @@ body {
   transition: all 0.5s ease;
 }
 
+.conteiner {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  bottom: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/*
+.banner__frame{
+  position: absolute;
+  top: 0;
+  width: 100%;
+}*/
+
+.imgover {
+  width: 75%;
+}
+
+.textover {
+
+}
+
+
+.textover__text {
+  font-family: fr-bold;
+  color: #000475;
+  font-size: 1.4vw;
+  margin-right: 100px;
+}
+
+
+
+
+.imgover__puppy{
+  width: 100%;
+}
+
+
 .Banner__imgbtn:hover {
   width: 80%;
 }
-.banner__row {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
+
 
 .downarrow{
   position: absolute;
@@ -237,60 +328,20 @@ body {
   transform: scale(0.8,0.8);
   transition: transform .5s ease;
 }
-.seller {
-  width: 300px;
-  margin-left: 100px;
-  margin-bottom: 20px;
-  transition: 1.2s ease;
-}
+
 .seller:hover {
   transition: all 0.5s ease;
   transform: translate(0px, -20px);
 }
-.planet1 {
-  display: flex;
-  flex-direction: column;
-  margin-top: 70px;
-}
-.planet1__description {
-  width: 300px;
-  margin-left: 75px;
-}
-.planet1__img {
-  transition: 0.5s ease;
-  width: 350px;
-  height: 350px;
-  margin-top: 25px;
-  margin-left: 60px;
-}
+
+
 .planet1__img:hover {
   transition: 0.5s ease;
   transform: scale(0.9);
 }
-.conteiner {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-}
-.imgover {
-  position: absolute;
-  top: 60px;
-  left: 200px;
-}
-.imgover__puppy{
-    width: 600px;
-}
-.textover {
-  position: absolute;
-  top: 200px;
-  left: 200px;
-}
-.textover__text {
-  font-family: fr-bold;
-  color: #000475;
-  font-size: 30px;
-  margin-right: 100px;
-}
+
+
+
 .minibanner{
   width: 100%;
   display: flex;
@@ -372,6 +423,15 @@ body {
   }
   .header__topright{
     width: 80%;
+  }
+
+  .textover__text {
+    font-size: 1vw;
+  }
+
+  .imgover {
+    top: 30px;
+    left: 90px;
   }
 
 }
