@@ -3,7 +3,7 @@
   src: url(/fonts/fr-bold.ttf);
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -17,13 +17,20 @@ body {
   margin: 0px;
 }
 
-.clearflix{
+.clearflix {
   clear: both;
 }
 
-.centrar{
+.centrar {
   max-width: 1920px;
   margin: auto;
+  min-width: 500px;
+}
+
+/*Elementos ocultos resposive*/
+
+.nav-responsive__logo {
+  display: none;
 }
 
 /*Cabezera --------------------------*/
@@ -37,14 +44,14 @@ body {
   background-position-y: 35px;
 }
 
-.header__center{
+.header__center {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 20%;
 }
 
-.header__toplogoimg{
+.header__toplogoimg {
   width: 210px;
 }
 
@@ -64,10 +71,9 @@ body {
   width: 40%;
 }
 
-.header__topnombreLogo{
+.header__topnombreLogo {
   padding-left: 65px;
 }
-
 
 .logoImg {
   width: 100px;
@@ -82,25 +88,22 @@ body {
   height: 100%;
 }
 
-.logoTitulo > img{
+.logoTitulo > img {
   position: absolute;
   transition: opacity 1s;
   height: 100px;
 }
 
-.logoTitulo:hover > img:first-child{
+.logoTitulo:hover > img:first-child {
   opacity: 0;
 }
 
-.logoTitulo > img:last-child{
+.logoTitulo > img:last-child {
   opacity: 0;
 }
-.logoTitulo:hover > img:last-child{
+.logoTitulo:hover > img:last-child {
   opacity: 1;
 }
-
-
-
 
 .btn {
   display: block;
@@ -130,7 +133,7 @@ body {
 
 /**Navegacion ---------------------*/
 
-.header__topright {
+.header__topright > div {
   display: flex;
   justify-content: flex-end;
   flex-basis: 40%;
@@ -144,21 +147,16 @@ body {
   align-items: center;
   width: 250px;
   height: 100%;
- 
 }
 
-.link__img{
+.link__img {
   width: 70%;
-
-  transition: all .5s ease;
-} 
+  transition: all 0.5s ease;
+}
 
 .link:hover > .link__img {
   width: 100%;
 }
-
-
-
 
 .mainnav {
   width: 100%;
@@ -188,25 +186,22 @@ body {
 .banner {
   position: relative;
   width: 100%;
-  height: 80.99%;
+  height: 800px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-end;
   justify-content: center;
   background-image: url(/images/Banner-bg.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .banner__row {
-  position: absolute;
   top: 0;
   width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
-
 
 /* Banner personajes ---------*/
 
@@ -225,7 +220,6 @@ body {
 
 .planet1__img {
   transition: 0.5s ease;
-  
 
   max-width: 350px;
   width: 100%;
@@ -239,16 +233,17 @@ body {
   margin-left: 100px;
   margin-bottom: 20px;
   transition: 1.2s ease;
+  min-width: 270px;
+  max-height: 743px;
+  max-width: 270px;
 }
-
 
 .banner__right {
   display: flex;
   flex-direction: column;
   width: 50%;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-end;
- 
 }
 
 .banner__right a {
@@ -265,15 +260,19 @@ body {
 }
 
 .conteiner {
-  position: relative;
-  display: inline-block;
   text-align: center;
   bottom: 150px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  background-position-x: center;
+  background-position-y: 0;
+  padding-top: 0;
 }
 
 /*
@@ -284,49 +283,59 @@ body {
 }*/
 
 .imgover {
+  padding: 25px 25px 0% 25px;
   width: 75%;
 }
 
 .textover {
-
+  width: 70%;
+  padding-left: 10px;
 }
-
 
 .textover__text {
   font-family: fr-bold;
   color: #000475;
-  font-size: 1.4vw;
-  margin-right: 100px;
+  font-size: 1.5em;
+  padding-left: 77px;
 }
 
-
-
-
-.imgover__puppy{
+.imgover__puppy {
   width: 100%;
 }
-
 
 .Banner__imgbtn:hover {
   width: 80%;
 }
 
-
-.downarrow{
+.downarrow {
   position: absolute;
+  bottom: 30px;
   width: 100%;
-  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.downarrow__img {
+  width: 90px;
+  transition: transform 0.5s ease;
+}
+.downarrow__img:hover {
+  transform: scale(0.8, 0.8);
+  transition: transform 0.5s ease;
+}
+
+.cta {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  padding-right: 150px;
 }
-.downarrow__img{
-  width: 90px;
-  transition: transform .5s ease;
-}
-.downarrow__img:hover{
-  transform: scale(0.8,0.8);
-  transition: transform .5s ease;
+
+.cta a {
 }
 
 .seller:hover {
@@ -334,15 +343,12 @@ body {
   transform: translate(0px, -20px);
 }
 
-
 .planet1__img:hover {
   transition: 0.5s ease;
   transform: scale(0.9);
 }
 
-
-
-.minibanner{
+.minibanner {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -350,47 +356,43 @@ body {
   justify-content: space-around;
   transition: 1s;
   background-image: url(/images/trama.png);
-  background-size: 7%; 
-  background-position-y: -30px; 
+  background-size: 7%;
+  background-position-y: -30px;
 }
-.minibanner:hover{
+.minibanner:hover {
   transition: 1s;
   background-color: #891830;
-
 }
-.midbanner__center{
+.midbanner__center {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-
-  
 }
-.minibanner__img{
+.minibanner__img {
   padding: 30px;
 }
 
-.title{
+.title {
   width: 600px;
   margin-top: 10px;
 }
-.minibanner__text{ 
+.minibanner__text {
   font-family: fr-bold;
   color: #ffff;
   font-size: 30px;
   text-align: center;
 }
-.product{
-  width: 300px;;
+.product {
+  width: 300px;
 }
-.caracteristics{
+.caracteristics {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
-.caracteristics__column{
+.caracteristics__column {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -407,21 +409,18 @@ body {
   }
 }
 
-
-
-@media screen and (max-width:1024px) {
-
-  .header__top{
+@media screen and (max-width: 1024px) {
+  .header__top {
     flex-wrap: wrap;
   }
-  .header__toplogo{
+  .header__toplogo {
     width: 60%;
   }
 
-  .header__center{
+  .header__center {
     width: 40%;
   }
-  .header__topright{
+  .header__topright > div{
     width: 80%;
   }
 
@@ -434,33 +433,133 @@ body {
     left: 90px;
   }
 
+  .seller {
+    min-width: 137px;
+    max-height: 390px;
+  }
+
+  .textover__text {
+    padding-left: 50px;
+  }
 }
 
-@media screen and (max-width:640px) {
-
-  .header__top{
+@media screen and (max-width: 640px) {
+  .header__top {
     flex-wrap: wrap;
   }
-  
-  .header__toplogo, .header__toplogoimg{
+
+  .header__toplogo,
+  .header__toplogoimg {
     display: flex;
     justify-content: center;
     align-items: center;
-
-
   }
 
-  .header__topnombreLogo, .header__center{
-
-      display: none;
+  .header__topnombreLogo,
+  .header__center {
+    display: none;
   }
 
-
-  .header__center{
+  .header__center {
     width: 100%;
   }
-  .header__topright{
+  .header__topright > div{
     width: 100%;
   }
 
+  .seller {
+    /* min-width: 0;*/
+  }
+
+  .textover__text {
+    padding-left: 30px;
+  }
+
+  .banner {
+    justify-content: flex-start;
+    height: 520px;
+  }
+
+  .cta {
+    padding-right: 0;
+  }
+
+  .conteiner {
+    display: none;
+  }
+
+  /**Navegacion*/
+
+  /*Elementos ocultos resposive*/
+
+  .nav-responsive__logo {
+    display: flex;
+  }
+}
+
+/*Ultima altenativa no viable*/
+
+@media screen and (max-width: 1460px) {
+  .textover__text {
+    font-size: 1.3em;
+    padding-left: 50px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .textover__text {
+    font-size: 1.1em;
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 1145px) {
+  .textover__text {
+    font-size: 0.8em;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .textover__text {
+    font-size: 0.6em;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .textover__text {
+    font-size: 0.5em;
+    padding-left: 10px;
+  }
+
+  .planet1 {
+    width: 65%;
+    margin-top: 0;
+  }
+
+  .planet1__description {
+    width: 109%;
+    margin-left: 50px;
+  }
+
+  .planet1 {
+    position: relative;
+
+    bottom: 39px;
+  }
+}
+
+
+
+
+
+
+
+.contendor-menu-responsive > div > a{
+  display: none;
+}
+
+.view-menu > div > a{
+  display: flex;
 }
