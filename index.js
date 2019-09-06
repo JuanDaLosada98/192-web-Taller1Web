@@ -1,6 +1,7 @@
 function paginaCargada(){
 
 
+
     function selector(ruta){
         let elemento = document.querySelector(ruta);
         if(elemento != null){
@@ -8,12 +9,13 @@ function paginaCargada(){
         }else{
             alert(" El identificador " + ruta + " es invilado");
         }
-     
     }
 
     var menus = {};
 
     menus.actual = selector(".contendor-menu-normal");
+    menus.secundarioLocacion = selector(".contenedor-menu-normal-secundario");
+    menus.secundario = selector(".mainnav");
 
     menus.actualLocation = selector(".header__topright");
     menus.otraLocation = selector(".contendor-menu-responsive");
@@ -36,8 +38,10 @@ function paginaCargada(){
 
         if(w <= 640){
             menus.responsive.appendChild(menus.actual);
+            menus.responsive.appendChild(menus.secundario);
         }else{
             menus.actualLocation.appendChild(menus.actual);
+            menus.secundarioLocacion.appendChild(menus.secundario);
         }
     }
  
