@@ -37,8 +37,9 @@ function paginaCargada(){
         this.console.log(w)
 
         if(w <= 640){
-            menus.responsive.appendChild(menus.actual);
+           
             menus.responsive.appendChild(menus.secundario);
+            menus.responsive.appendChild(menus.actual);
         }else{
             menus.actualLocation.appendChild(menus.actual);
             menus.secundarioLocacion.appendChild(menus.secundario);
