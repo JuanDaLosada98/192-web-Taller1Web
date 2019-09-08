@@ -27,6 +27,7 @@ function paginaCargada(){
 
     menus.menuHambugesa.addEventListener("click", ()=>{
         menus.responsive.classList.toggle("view-menu") ;
+        
 
     });
 

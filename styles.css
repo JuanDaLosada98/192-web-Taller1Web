@@ -210,7 +210,7 @@ video {
   align-items: center;
   justify-content: flex-start;
 
-  background-image: url(/images/Banner-bg.png);
+  background-image: url(./images/Banner-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -378,7 +378,7 @@ video {
   justify-content: center;
   align-items: center;
   transition: 1s;
-  background-image: url(/images/trama.png);
+  background-image: url(./images/trama.png);
   background-size: 7%;
   background-position-y: -30px;
 }
@@ -504,6 +504,11 @@ video {
   }
   .planet1__description {
     margin-left: 55px;
+  }
+}
+@media screen and (max-width: 1230px){
+  .textCaract__text{
+    width: 70%;
   }
 }
 @media (max-width: 710px) {
@@ -878,6 +883,9 @@ video {
   transition: all 0.5s ease;
 
   z-index: 10000;
+}
+.body--menuresponsive{
+  overflow-y: hidden;
 }
 
 .view-menu {
