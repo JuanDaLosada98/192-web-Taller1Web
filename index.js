@@ -1,57 +1,18 @@
-function paginaCargada(){
-
-
-
-    function selector(ruta){
-        let elemento = document.querySelector(ruta);
-        if(elemento != null){
-            return elemento;
-        }else{
-            alert(" El identificador " + ruta + " es invilado");
-        }
-    }
-
-    var menus = {};
-
-    menus.actual = selector(".contendor-menu-normal");
-    menus.secundarioLocacion = selector(".contenedor-menu-normal-secundario");
-    menus.secundario = selector(".mainnav");
-
-    menus.actualLocation = selector(".header__topright");
-    menus.otraLocation = selector(".contendor-menu-responsive");
-
-
-    menus.responsive = selector(".contendor-menu-responsive");
-    menus.menuHambugesa = selector(".nav-responsive__logo");
-
-
-    menus.menuHambugesa.addEventListener("click", ()=>{
-        menus.responsive.classList.toggle("view-menu") ;
-        
-
-    });
-
-    function menuAcomodar(){
-        var w = document.documentElement.clientWidth;
-        var h = document.documentElement.clientHeight;
-
-        this.console.log(w)
-
-        if(w <= 640){
-           
-            menus.responsive.appendChild(menus.secundario);
-            menus.responsive.appendChild(menus.actual);
-        }else{
-            menus.actualLocation.appendChild(menus.actual);
-            menus.secundarioLocacion.appendChild(menus.secundario);
-        }
-    }
- 
-    menuAcomodar();
-    window.addEventListener('resize', (event) => {
-
-        menuAcomodar();
-    });
+var btn = document.querySelector(".nav-responsive__logo");
+var nav = document.querySelector(".mainnav");
+var content = document.querySelector(".wrapcontent");
+var content2 = document.querySelector(".wrapcontent2");
+var downarrow = document.querySelector(".downarrow");
+var layer = document.querySelector(".layer");
+var overflow = document.querySelector(".bodyOverflow");
+function handleClick() {
+  nav.classList.toggle("mainnav--active");
+  btn.classList.toggle("nav-responsive__logo--active");
+  content.classList.toggle("wrapcontent--active");
+  content2.classList.toggle("wrapcontent2--active");
+  downarrow.classList.toggle("downarrow--active");
+  layer.classList.toggle("layer--active");
+  overflow.classList.toggle("bodyOverflow--active");
 }
 
-window.addEventListener("load", paginaCargada);
+btn.addEventListener("click", handleClick);
