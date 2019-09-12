@@ -6,6 +6,10 @@
 * {
   box-sizing: border-box;
 }
+.viewportdepth{
+  width: 100%;
+  height: 99vh;
+}
 .comodo {
   display: none;
 }
@@ -36,7 +40,6 @@ body {
 .navlink {
   text-align: center;
 }
-/*Elementos ocultos resposive*/
 
 .nav-responsive__logo {
   display: none;
@@ -1019,6 +1022,9 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 @media screen and (max-width: 657px) {
+  .viewportdepth{
+    height: 80vh;
+  }
   .header__top {
     flex-wrap: wrap;
   }
@@ -1284,6 +1290,9 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 @media screen and (max-width: 375px) {
+  .viewportdepth{
+    height: 78vh;
+  }
   .header__topnombreLogo {
     display: flex;
   }
